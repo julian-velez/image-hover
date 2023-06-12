@@ -1,0 +1,46 @@
+body {
+background-color: black;
+display: flex;
+align-items: center ;
+justify-content: center;
+margin: 290px;
+}
+
+
+.zigzag-image {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .zigzag-image img {
+    display: block;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+  }
+
+
+  .zigzag-image {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px; /* Establece la perspectiva 3D */
+  }
+  
+  .zigzag-image img {
+    display: block;
+    max-width: 300px; /* Ajusta el tamaño máximo de la imagen según tus necesidades */
+    transform-style: preserve-3d; /* Mantiene la transformación 3D */
+    animation: spin 4s linear infinite; /* Agrega una animación de giro */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translateZ(-100px) rotateY(0deg); /* Establece la posición inicial */
+    }
+    100% {
+      transform: translateZ(-100px) rotateY(360deg); /* Establece la posición final */
+    }
+  }
+  
+  /* no puedo hablar mucho por eso grabo con fondo de musica espero me entiendan   */
